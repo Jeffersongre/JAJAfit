@@ -19,14 +19,14 @@ export const LoginForm = () => {
     try {
       // TODO: Implement actual login logic
       toast({
-        title: "Welcome back!",
-        description: "Successfully logged in to your account.",
+        title: "Bem-vindo de volta!",
+        description: "Login realizado com sucesso.",
       });
       navigate("/dashboard");
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Invalid email or password. Please try again.",
+        title: "Erro",
+        description: "Email ou senha inválidos. Por favor, tente novamente.",
         variant: "destructive",
       });
     } finally {
@@ -42,7 +42,7 @@ export const LoginForm = () => {
             <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
             <Input
               type="email"
-              placeholder="Email address"
+              placeholder="Endereço de email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -55,7 +55,7 @@ export const LoginForm = () => {
             <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
             <Input
               type="password"
-              placeholder="Password"
+              placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -73,10 +73,10 @@ export const LoginForm = () => {
         {isLoading ? (
           <>
             <Loader2 className="h-4 w-4 animate-spin" />
-            Signing in...
+            Entrando...
           </>
         ) : (
-          "Sign in"
+          "Entrar"
         )}
       </Button>
 
@@ -86,16 +86,16 @@ export const LoginForm = () => {
           onClick={() => navigate("/forgot-password")}
           className="text-sm text-gray-600 hover:text-primary transition-colors"
         >
-          Forgot your password?
+          Esqueceu sua senha?
         </button>
         <div className="text-sm text-gray-600">
-          Don't have an account?{" "}
+          Não tem uma conta?{" "}
           <button
             type="button"
             onClick={() => navigate("/signup")}
             className="font-medium text-primary hover:text-primary/80 transition-colors"
           >
-            Sign up
+            Cadastre-se
           </button>
         </div>
       </div>
