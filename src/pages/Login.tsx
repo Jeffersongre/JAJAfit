@@ -2,11 +2,11 @@ import { LoginForm } from "@/components/auth/LoginForm";
 
 const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8 animate-fade-in">
         <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold text-gray-900">Welcome back</h2>
-          <p className="mt-2 text-sm text-gray-600">Sign in to your account</p>
+          <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Welcome back</h1>
+          <p className="mt-3 text-lg text-gray-600">Your fitness journey continues here</p>
         </div>
         <LoginForm />
       </div>
